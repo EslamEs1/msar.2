@@ -1,0 +1,234 @@
+/* Made By => Eslam Essam  */
+:root {
+    --main-color: #ff3528;
+    --tow-color: #c4281d;
+    --second-color: #262626;
+    --section-color: #f5f5f5;
+    --main-font: #fff;
+    --addres-color: #d3d3d3;
+    --main-transition: 0.3s;
+    --main-padding: 20px;
+    --box-shadow: 0 0 5px rgb(172, 172, 172);
+    --border-radius: 10px;
+    transition: var(--main-transition);
+    --line-height: 1.5;
+}
+/* Start background_page */
+.background_page {
+    padding-top: 20px;
+}
+.background_page .containerr {
+    display: flex;
+    justify-content: center;
+}
+.background_page img {
+    max-width: 100%;
+    width: fit-content;
+}
+/* Start background_page */
+/* Start SaidBar */
+
+.sidbar_more {
+    margin: 10px;
+}
+.sidbar_more .pearntside {
+    display: flex;
+}
+.sidbar_more .start_box {
+    position: sticky;
+    z-index: 1;
+    top: 0;
+    right: 10px;
+    overflow-x: hidden;
+    height: 100%;
+    width: 350px;
+}
+.sidbar_more .advrt_more {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-top: 10px;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    height: auto;
+}
+.sidbar_more .lart_box {
+    left: 0;
+    margin: 15px;
+    top: 0;
+}
+
+.sidbar_more .show_all {
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px 30px;
+    height: 100%;
+}
+
+.sidbar_more .show_all .box {
+    position: relative;
+}
+
+.sidbar_more .show_all .box::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--main-color);
+}
+
+.sidbar_more .show_all .box a {
+    color: var(--second-color);
+    font-family: font_bold;
+    transition: var(--main-transition);
+    display: block;
+    line-height: var(--line-height);
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.sidbar_more .show_all .box a:hover {
+    color: var(--main-color);
+}
+
+.sidbar_more .show_all .box span i {
+    margin-left: 10px;
+    color: var(--second-color);
+    font-size: 12px;
+}
+
+.sidbar_more .show_all .box img {
+    width: 100%;
+    transition: var(--main-transition);
+    margin-bottom: 20px;
+}
+
+.sidbar_more .show_all .box img:hover {
+    opacity: 0.9;
+}
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+    .sidbar_more .lart_box {
+        left: 0;
+        margin: 15px;
+        top: 0;
+    }
+}
+@media (max-width: 991px) {
+    .sidbar_more .pearntside {
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
+
+    .sidbar_more .show_all {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .sidbar_more .start_box {
+        width: 100%;
+    }
+    .sidbar_more .elegant-calencar {
+        max-width: 70%;
+    }
+
+    .sidbar_more .lbox .tab-content .box {
+        display: flex;
+        justify-content: unset;
+    }
+
+    .sidbar_more .lbox .tab-content .box a {
+        font-size: 18px;
+    }
+
+    .sidbar_more .lbox .tab-content .box span {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .sidbar_more .lbox .tab-content .box {
+        justify-content: space-between;
+    }
+
+    .sidbar_more .elegant-calencar {
+        max-width: 100%;
+    }
+
+    .sidbar_more .lbox .tab-content .box a {
+        font-size: 13px;
+    }
+
+    .sidbar_more .lbox .tab-content .box span {
+        font-size: 14px;
+    }
+}
+
+/* Start show_detail */
+
+.show_detail {
+    width: 80%;
+    margin: 10px;
+}
+.show_detail .detail {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.show_detail .detail .box_detail h3 {
+    font-family: font_bold;
+    color: var(--second-color);
+}
+
+.show_detail .detail .box_detail span {
+    font-size: 13px;
+}
+
+.show_detail .detail .box_detail span i {
+    margin: 10px 5px 20px;
+    font-size: 13px;
+}
+
+.show_detail .detail .box_detail img {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.show_detail .detail .box_detail p {
+    font-size: 19px;
+    line-height: 1.9;
+    margin-bottom: 20px;
+}
+
+.box_detail {
+    position: sticky;
+    z-index: 1;
+    top: 0;
+    height: 100%;
+    margin: 0 10px;
+}
+
+.box_detail a i {
+    padding: 20px 0;
+    font-size: 30px;
+    color: rgb(71, 71, 71);
+    transition: var(--main-transition);
+}
+
+.box_detail a i:hover {
+    color: #999;
+}
+
+@media (max-width: 991px) {
+    .show_detail {
+        width: 100%;
+        margin: 10px;
+    }
+}
+
+/* End show_detail */
