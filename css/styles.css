@@ -28,7 +28,6 @@ body {
     font-family: font_reg;
     line-height: 100%;
     background-color: var(--section-color);
-    height: 5000px;
 }
 
 * {
@@ -362,39 +361,6 @@ a[data-toggle="collapse"] {
 
 
 
-#sidebar .footer {
-    color: #555;
-    font-size: 14px;
-    text-align: center;
-    position: absolute;
-    bottom: 20px;
-}
-
-#sidebar .footer .social_media {
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    margin-bottom: 20px;
-
-}
-
-#sidebar .footer .social_media a {
-    color: #777;
-    font-size: 20px;
-}
-
-#sidebar .footer .social_media a:hover {
-    color: rgb(53, 53, 53);
-}
-
-
-#sidebar .footer a {
-    display: block;
-    text-align: center;
-    margin-top: 10px;
-}
-
-
 
 /* Start Content My Navbar */
 header .thenav {
@@ -407,14 +373,23 @@ header .thenav {
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
     text-align: center;
     z-index: 5;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
 
 }
 
 header .thenav p {
     padding: 0;
     margin: 0;
+    line-height: 1.5;
+}
 
-
+@media (max-width: 800px) {
+    header .thenav {
+        flex-direction: column-reverse;
+    }
 }
 
 /* Start new_news   */
@@ -1381,7 +1356,8 @@ header .thenav p {
 
 }
 
-.mix .big_item .text a ,.mix .list_mix .smull_item .text a{
+.mix .big_item .text a,
+.mix .list_mix .smull_item .text a {
     color: var(--second-color);
     font-family: font_bold;
     font-size: 18px;
@@ -1391,11 +1367,13 @@ header .thenav p {
     transition: var(--main-transition);
 }
 
-.mix .big_item .text a:hover ,.mix .list_mix .smull_item .text a:hover {
+.mix .big_item .text a:hover,
+.mix .list_mix .smull_item .text a:hover {
     color: var(--main-color);
 }
 
-.mix .big_item .text span ,.mix .list_mix .smull_item .text span{
+.mix .big_item .text span,
+.mix .list_mix .smull_item .text span {
     font-size: 13px;
     color: #888;
     margin: 0 10px;
@@ -1422,7 +1400,7 @@ header .thenav p {
     height: 100px;
 }
 
-.mix .list_mix .smull_item .text a{
+.mix .list_mix .smull_item .text a {
     font-size: 14px;
 }
 
@@ -1433,50 +1411,47 @@ header .thenav p {
         grid-template-columns: 1fr 25%;
     }
 
-     
+
 
     .mix .big_item img {
-    height: 150px;
-}
+        height: 150px;
+    }
 
-.mix .list_mix .smull_item img {
-    width: 100px;
-    height: 90px;
-}
+    .mix .list_mix .smull_item img {
+        width: 100px;
+        height: 90px;
+    }
 
-.mix .list_mix .smull_item .text a {
-    font-size: 13px;
-}
+    .mix .list_mix .smull_item .text a {
+        font-size: 13px;
+    }
 
-.mix .list_mix .smull_item .text span {
-    font-size: 11px;
-}
+    .mix .list_mix .smull_item .text span {
+        font-size: 11px;
+    }
 
-.mix .list_mix {
-    grid-template-columns: repeat(auto-fit, minmax(222px, 1fr));
-}
-
-
+    .mix .list_mix {
+        grid-template-columns: repeat(auto-fit, minmax(222px, 1fr));
+    }
 
 }
-
-
 
 
 @media (min-width: 992px) and (max-width: 1200px) {
     .mix .list_mix {
-    grid-template-columns:1fr repeat(auto-fit, minmax(200px, 1fr));
-}
+        grid-template-columns: 1fr repeat(auto-fit, minmax(200px, 1fr));
+    }
 
-.mix .father_mix {
-    grid-template-columns: 1fr;
+    .mix .father_mix {
+        grid-template-columns: 1fr;
 
-}
-.mix .list_mix .smull_item img {
-    width: 120px;
-    object-fit: cover;
-    height: 100px;
-}
+    }
+
+    .mix .list_mix .smull_item img {
+        width: 120px;
+        object-fit: cover;
+        height: 100px;
+    }
 }
 
 
@@ -1491,23 +1466,168 @@ header .thenav p {
     }
 
     .mix .list_mix .smull_item img {
-    width: 100px;
-    object-fit: cover;
-    height: 95px;
-}
+        width: 100px;
+        object-fit: cover;
+        height: 95px;
+    }
 }
 
-@media (max-width: 767px){
+@media (max-width: 767px) {
     .mix .list_mix {
-    grid-template-columns:1fr;
-}
+        grid-template-columns: 1fr;
+    }
+
     .mix .father_mix {
         grid-template-columns: 1fr;
     }
 
     .mix .big_item img {
-    height: auto;
-    object-fit: contain;
+        height: auto;
+        object-fit: contain;
     }
 
+}
+
+
+/* Start Live  */
+.live_youtube {
+    padding: 20px 10px 10px;
+    background-color: var(--second-color);
+}
+
+.live_video {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    height: 400px;
+}
+
+.live_video iframe {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+}
+
+.live_video p {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+
+
+}
+
+@media (max-width:567px) {
+    .live_video {
+
+        height: auto;
+    }
+
+}
+
+
+
+/* ٍStart footer */
+
+footer{
+    margin-top:50px  0 0 0;
+    background-color: #fff;
+    box-shadow: 1px -10px 10px rgba(141, 141, 141, 0.1);
+    
+}
+
+footer img{
+    width: 100%;
+    object-fit: contain;
+}
+
+
+footer .list_footer{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px 0;
+
+}
+
+footer .list_footer ul{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 30px;
+    margin:30px 0;
+}
+
+footer .list_footer ul a{
+    color: #555;
+    font-family: font_bold;
+    font-size: 100%;
+    line-height: 1.6;
+    display: block;
+    transition: var(--main-transition);
+
+}
+
+footer .list_footer .social p a img{
+    height: 35px;   
+    width: 35px;
+}
+
+footer .list_footer .social {
+    text-align: center;
+}
+
+footer .list_footer .social a {
+    display: block;
+    margin: 20px 0;
+}
+
+
+footer .list_footer ul a:hover{
+    color: var(--main-color);
+}
+
+
+footer .list_footer ul i{
+    font-size: 20px;
+    color: #777;
+}
+
+footer .list_footer ul i:hover{
+    color: #262626;
+}
+
+
+@media (max-width:767px) {
+    footer .list_footer .box ul{
+        flex-direction: column;
+    }
+}
+
+@media (min-width:768px) and (max-width:991px) {
+    footer .list_footer ul {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        gap: 14px;
+        margin: 30px 0;
+}
+footer .list_footer .box ul a{
+    font-size: 13px;
+}
+
+}
+
+@media (min-width:992px) and (max-width:1199px) {
+    footer .list_footer .box ul a{
+    font-size: 13px;
+}
+
+footer .list_footer ul {
+        gap: 20px;
+        margin: 30px 0;
+}
 }
